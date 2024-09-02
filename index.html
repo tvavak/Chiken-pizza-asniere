@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Chicken Pizza Asnières</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo chiken pizza.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("zT-PgIrXu_cFJ2KL3"); // Assurez-vous que c'est votre clé publique correcte
+        })();
+    </script>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-container">
+            <img src="logo chiken pizza.png" alt="Logo du restaurant" class="logo-image">
+        </div> 
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="services.html">Menu</a>
+            <a href="apropos.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+
+    <div class="loader"></div>
+
+    <main class="main">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="pizza luxe.avif" alt="Pizza au poulet" width="1200" height="400">
+                    <div class="carousel-caption">
+                    </div>
+                    <div class="carousel-frame">
+                        <h1>Qualité et Saveurs</h1>
+                        <p>Dégustez nos délicieuses pizzas, cuites à la perfection !</p>
+                    </div>
+                    <a href="services.html" class="carousel-link">Voir notre menu</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="interieur chicken.webp" alt="Intérieur moderne du restaurant" width="1200" height="400">
+                    <div class="carousel-caption">
+                    </div>
+                    <div class="carousel-frame">
+                        <h1>Un Lieu Convivial</h1>
+                        Profitez d'une ambiance chaleureuse pour un moment agréable entre amis ou en famille
+                    </div>
+                    <a href="apropos.html" class="carousel-link">En savoir plus</a>
+                </div>
+                <div class="carousel-item">
+                    <img src="pizza de luxe.jpg" alt="Pizza gourmande" width="1200" height="400">
+                    <div class="carousel-caption">
+                    </div>
+                    <div class="carousel-frame">
+                        <h1>Faites par des Passionnés</h1>
+                        Découvrez nos pizzas préparées avec amour et des ingrédients frais
+                    </div>
+                    <a href="contact.html" class="carousel-link">Nous contacter</a>
+                </div>
+            </div>
+            <a class="carousel-control carousel-control-prev" href="#" role="button" data-slide="prev">&#10094;</a>
+            <a class="carousel-control carousel-control-next" href="#" role="button" data-slide="next">&#10095;</a>
+        </div>
+
+        <div class="slogan animated-element">
+            "L'art de la pizza, une expérience gustative inoubliable"
+        </div>
+
+        <div class="social-links animated-element">
+            <a href="https://www.facebook.com/chickenpizzaasnieres" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/chickenpizzaasnieres" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/chickenpizzaasnieres" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+        </div>
+
+        <section id="produits-phares" class="featured-products">
+            <h3 class="animated-element">Nos Produits Phares</h3>
+            <div class="product-grid">
+                <div class="product-item animated-element">
+                    <img src="pizza orientale.jpg" alt="Pizza classique" width="300" height="200">
+                    <div class="product-info">
+                        <h4>Pizza Orientale</h4>
+                        <p>Une pizza traditionnelle avec une sauce tomate fraîche et du fromage fondant et notre meilleur selection de viande frâiche.</p>
+                        <a href="services.html" class="btn-menu">Voir le menu</a>
+                    </div>
+                </div>
+                <div class="product-item animated-element">
+                    <img src="pizza buffalo.jpeg" alt="Pizza au poulet" width="300" height="200">
+                    <div class="product-info">
+                        <h4>Pizza Buffalo</h4>
+                        <p>Notre spécialité : une pizza au poulet mariné et une sauce barbecue savoureuse</p>
+                        <a href="services.html" class="btn-menu">Voir le menu</a>
+                    </div>
+                </div>
+                <div class="product-item animated-element">
+                    <img src="pizza western.jpg"Pizza végétarienne" width="300" height="200">
+                    <div class="product-info">
+                        <h4>Pizza Western</h4>
+                        <p>Une option végétarienne délicieuse, avec des légumes frais et une crème fraiche épicée</p>
+                        <a href="services.html" class="btn-menu">Voir le menu</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    
+        <section class="section animated-element">
+            <h3>Découvrez Notre Menu Complet</h3>
+            <p>Explorez notre menu varié, mettant en vedette nos spécialités de pizzas ainsi que d'autres délices culinaires. Nous proposons également des options végétariennes et des plats pour tous les goûts.</p>
+            <a href="services.html" class="btn-menu">Voir le menu complet</a>
+        </section>
+
+        <section class="section animated-element">
+            <h3>À Propos de Chicken Pizza Asnières</h3>
+            <p>Découvrez l'histoire passionnante de Chicken Pizza Asnières, notre philosophie culinaire et notre engagement envers la qualité.</p>
+            <a href="apropos.html" class="btn-menu">En savoir plus sur nous</a>
+        </section>
+
+        <section class="horaires-section">
+
+            <div class="horaires-wrapper">
+             
+                
+            <div class="horaires-frame">
+                <div class="horaires-container">          
+              <h2>Nos Horaires d'ouverture</h2>
+            <div class="horaires-grids">
+            <div class="jour">
+                <span class="jour-nom">Lundi</span>
+                <span class="heures">11:00 – 01:00</span>
+            </div>
+            <div class="jour">
+                <span class="jour-nom">Mardi</span>
+                <span class="heures">11:00 – 01:00</span>
+            </div>
+            <div class="jour">
+                <span class="jour-nom">Mercredi</span>
+                <span class="heures">11:00 – 01:00</span>
+            </div>
+            <div class="jour">
+                <span class="jour-nom">Jeudi</span>
+                <span class="heures">11:00 – 01:00</span>
+            </div>
+            <div class="jour">
+                <span class="jour-nom">Vendredi</span>
+                <span class="heures">11:00 – 23:00</span>
+            </div>
+            <div class="jour">
+                <span class="jour-nom">Samedi</span>
+                <span class="heures">11:00 – 23:00</span>
+            </div>
+            <div class="jour center">
+                <span class="jour-nom">Dimanche</span>
+                <span class="heures">11:00 – 23:00</span>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-parking"></i></div>
+                    <h3>Parking en libre-service</h3>
+                    <p>Profitez d'un parking facile d'accès à tout moment de la journée.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-phone"></i></div>
+                    <h3>À emporter</h3>
+                    <p>Commandez vos plats préférés pour les emporter où vous le souhaitez.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-wifi"></i></div>
+                    <h3>Wi-Fi gratuit</h3>
+                    <p>Connectez-vous à notre réseau Wi-Fi rapide et gratuit pendant votre visite.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon"><i class="fas fa-utensils"></i></div>
+                    <h3>Repas sur Place</h3>
+                    <p>Dégustez vos plats dans un environnement chaleureux avec des prises disponibles pour recharger vos appareils.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="contact" class="contact-section">  
+            <h3>Contactez-nous</h3>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <strong>Email :</strong> mbennaji@gmail.com</p>
+                <p><i class="fas fa-phone"></i> <strong>Téléphone :</strong> +33 01 47 93 03 66</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong><a href="https://www.google.fr/maps/place/88+Rue+du+M%C3%A9nil,+92600+Asni%C3%A8res-sur-Seine/@48.9208613,2.2734754,15z/data=!3m1!4b1!4m6!3m5!1s0x47e66f5f0ce53e3b:0x891755df512dc1d4!8m2!3d48.9208618!4d2.2837751!16s%2Fg%2F11c4cr4vn3?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">88 Rue du Ménil, 92600 Asnières-sur-Seine, France</a></p>
+            </div>
+        </section>
+    
+
+    </section>
+    <div class="payment-methods">
+        <img src="image-removebg-preview (10).png" alt="Moyens de Paiement">
+    </div>
+</section>
+</section>
+
+
+        <section id="marketplaces" class="marketplaces-section">
+            <h3>Commandez en ligne</h3>
+            <div class="marketplace-links">
+              <a href="https://www.ubereats.com/fr/store/asnieres-pizza-and-chicken/OF1vrcK5SmynoLh6nXjuSA" target="_blank" class="marketplace-link">
+                <img src="uber.png" alt="UberEats" class="marketplace-logo animated-logo">
+              </a>
+              <a href="https://deliveroo.fr/fr/menu/paris/asnieres-sur-seine-coubertin/asnieres-pizza" target="_blank" class="marketplace-link">
+                <img src="deliverooo.png" alt="Deliveroo" class="marketplace-logo animated-logo">
+              </a>
+            </div>
+          </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Chicken Pizza. Tous droits réservés.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/chickenpizza" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/chickenpizza" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://twitter.com/chickenpizza" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel-inner');
+            const items = carousel.querySelectorAll('.carousel-item');
+            const prevBtn = document.querySelector('.carousel-control-prev');
+            const nextBtn = document.querySelector('.carousel-control-next');
+            let currentIndex = 0;
+            let startX;
+            let isSwiping = false;
+
+            function showSlide(index) {
+                carousel.style.transform = `translateX(-${index * 33.333}%)`;
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % items.length;
+                showSlide(currentIndex);
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                showSlide(currentIndex);
+            }
+
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+
+            // Swipe functionality
+            carousel.addEventListener('touchstart', function(e) {
+                startX = e.touches[0].pageX;
+                isSwiping = true;
+            }, {passive: true});
+
+            carousel.addEventListener('touchmove', function(e) {
+                if (!isSwiping) return;
+                const currentX = e.touches[0].pageX;
+                const diff = startX - currentX;
+                if (Math.abs(diff) > 50) { // Threshold for swipe
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    isSwiping = false;
+                }
+            }, {passive: true});
+
+            carousel.addEventListener('touchend', function() {
+                isSwiping = false;
+            });
+
+            // Auto-play
+            setInterval(nextSlide, 5000);
+
+            // Intersection Observer for animations
+            const animateOnScroll = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            // Animate elements
+            document.querySelectorAll('.animated-element').forEach(el => {
+                animateOnScroll.observe(el);
+            });
+
+            // Stagger product item animations
+            const productItems = document.querySelectorAll('.product-item');
+            productItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
+            });
+        });
+        window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        loader.style.display = 'none';
+    });
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+function setActiveDay() {
+            const days = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+            const today = new Date().getDay();
+            const activeDay = document.querySelectorAll('.jour')[today];
+            activeDay.classList.add('active');
+        }
+        setActiveDay();
+
+        // Récupérer le bouton
+let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Montrer le bouton lorsque l'utilisateur scroll vers le bas de 20px
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+};
+
+// Quand l'utilisateur clique sur le bouton, remonter en haut de la page
+scrollTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+    </script>
+</body></html>

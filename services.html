@@ -1,0 +1,1004 @@
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Chicken Pizza</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/png" href="Logo.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Include your CSS styles here */
+      .filter-btn {
+        background-color: #000000;
+        color: #f9f5f0;
+        border: none;
+        padding: 10px 16px; /* Increased padding for better touch targets */
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        font-size: 1em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Added subtle shadow */
+        
+      }
+
+      .filter-btn:hover {
+        background-color: #333;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
+      }
+
+      .filter-dropdown {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        min-width: 160px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 5px;
+        overflow: hidden;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: fadeIn 0.3s ease-in-out; /* Fade-in animation */
+      }
+
+      .filter-dropdown button {
+        color: #000000;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: left;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .filter-dropdown button:hover {
+        background-color: #f1f1f1;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Additional CSS for menu items */
+      .menu-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        aspect-ratio: 1 / 1;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .menu-item:hover {
+        transform: scale(1.05);
+      }
+
+      .menu-item img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item-title {
+        color: #fff;
+        transition: opacity 0.3s ease; /* Ajout de transition pour l'effet de disparition */
+      }
+
+      .menu-item:hover img {
+        transform: scale(1.1);
+        animation: hoverEffect 0.5s ease-in-out;
+      }
+
+      .menu-item-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item:hover .menu-item-title {
+        opacity: 0; /* Masquer le titre lors du survol */
+      }
+
+      .menu-item-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+      }
+
+      .menu-item-description {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+  </style>
+</head>
+<body>
+    <header class="header">
+      <div class="logo-container">
+        <img src="logo chiken pizza.png" alt="Logo du restaurant" class="logo-image">
+          </div> 
+          <nav class="nav">
+            <a href="index.html">Accueil</a>
+          <a href="services.html">Menu</a>
+          <a href="apropos.html">À propos</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <button id="scrollTopBtn" title="Remonter en haut">↑</button>
+
+</head>
+<body>
+    <div class="menu-container">
+        <div class="menu-header">
+          <h1>Notre Menu</h1>
+        </div>
+        <div class="menu-categories">
+          <button class="category-button active">Tous</button>
+          <button class="category-button">Fried Chicken</button>
+          <button class="category-button">Pizzas</button>
+          <button class="category-button">Burgers</button>
+          <button class="category-button">Wraps</button>
+          <button class="category-button">Paninis</button>
+          <button class="category-button">Menu Enfant</button>
+          <button class="category-button">Boissons</button>
+          <button class="category-button">Desserts</button>
+          <button class="category-button">Salades</button>
+          <button class="category-button">Tex Mex</button>
+        </div>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="wings.jpg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "solo 1" Chicken</h3>
+              <p>2 morceaux de poulet frit croustillant + 3 wings</p>
+              <div class="menu-item-price">9.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="wingss.avif" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "solo 2" Chicken</h3>
+              <p>10 pièces de wings</p>
+              <div class="menu-item-price">9.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="tenders wingss.jpg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "solo 3" Chicken</h3>
+              <p>4 tenders + 4 wings </p>
+              <div class="menu-item-price">9.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="tenders 5.webp" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "solo 4" Chicken</h3>
+              <p>5 tenders</p>
+              <div class="menu-item-price">9.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="nuggets.jpg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "solo 5" Chicken</h3>
+              <p>10 morceaux de chiken nuggets croustillantes</p>
+              <div class="menu-item-price">9.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="poulet morceau.jpg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "family A" Chicken</h3>
+              <p>10 morceaux de poulet</p>
+              <div class="menu-item-price">21.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="wings tenders.jpg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "family B" Chicken</h3>
+              <p>10 morceaux de poulet + 10 wings</p>
+              <div class="menu-item-price">21.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="chickenwings.jpeg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "family C" Chicken</h3>
+              <p>25 wings</p>
+              <div class="menu-item-price">22.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="mixx.jpg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "family D" Chicken</h3>
+              <p>10 tenders + 15 wings</p>
+              <div class="menu-item-price">27.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="20 tender.jpg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "family E" Chicken</h3>
+              <p>20 tenders</p>
+              <div class="menu-item-price">28.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="poulet cheese.jpeg" alt="Bucket Fried Chicken" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu "family F" Chicken</h3>
+              <p>35 wings + 2 cheeseburger</p>
+              <div class="menu-item-price">31.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="pizza margerite.jpeg" alt="Pizza Margherita" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Margherita</h3>
+              <p>Tomate, mozzarella</p>
+              <div class="menu-item-price">7.50 € (Sénior) / 12 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="Pizza-végétarienne-.webp" alt="Pizza Végétarienne" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Végétarienne</h3>
+              <p>Tomate, mozzarella, tomates fraîches, poivrons, oignons, olives, pommes de terre</p>
+              <div class="menu-item-price">7.50 € (Sénior) / 12 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza reine.jpg" alt="Pizza Reine" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Reine</h3>
+              <p>Tomate, mozzarella, jambon, champignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza sicilienne.jpg" alt="Pizza Sicilienne" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Sicilienne</h3>
+              <p>Tomate, mozzarella, anchois, câpres, olives</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza campione.jpg" alt="Pizza Campione" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Campione</h3>
+              <p>Tomate, mozzarella, viande hachée, œuf, champignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza 4 saison.webp" alt="Pizza 4 Saisons" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza 4 Saisons</h3>
+              <p>Tomate, mozzarella, jambon, artichauts, olives, champignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza 4 fromages.jpg" alt="Pizza 4 Fromages" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza 4 Fromages</h3>
+              <p>Tomate, mozzarella, gorgonzola, chèvre, fromage râpé</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza mexicaine.jpg" alt="Pizza Mexicaine" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Mexicaine</h3>
+              <p>Tomate, mozzarella, viande hachée, merguez, poivrons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="Pizza Calzone.webp" alt="Pizza Calzone" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Calzone</h3>
+              <p>Tomate, mozzarella, jambon ou viande hachée, œuf</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza orientale.jpg" alt="Pizza Orientale" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Orientale</h3>
+              <p>Tomate, mozzarella, merguez, champignons, œuf</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza regina.jpg" alt="Pizza Regina" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Regina</h3>
+              <p>Tomate, mozzarella, chorizo, champignons, olives</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza kebab.jpg" alt="Pizza Kebab" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Kebab</h3>
+              <p>Tomate, mozzarella, viande de kebab, tomates fraîches, oignons</p>
+              <div class="menu-item-price">9.90 € (Sénior) / 13.90 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza-pecheur.jpg" alt="Pizza Pêcheur" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Pêcheur</h3>
+              <p>Tomate, mozzarella, thon, œuf, olives</p>
+              <div class="menu-item-price">7.50 € (Sénior) / 12 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza fruit de mer.jpg" alt="Pizza Fruits de Mer" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Fruits de Mer</h3>
+              <p>Tomate, mozzarella, fruits de mer, ail, persil</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza buffalo.jpeg" alt="Pizza Buffalo" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Buffalo</h3>
+              <p>Tomate et sauce barbecue, mozzarella, oignons, viande hachée, poivrons</p>
+              <div class="menu-item-price">9.90 € (Sénior) / 13.90 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza curry.avif" alt="Pizza Curry" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Curry</h3>
+              <p>Crème fraîche, mozzarella, poulet mariné, poivrons, oignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza paysanne.jpg" alt="Pizza Paysanne" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Paysanne</h3>
+              <p>Crème fraîche, mozzarella, jambon, pommes de terre, oignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,5O € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza western.jpg" alt="Pizza Western" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Western</h3>
+              <p>Crème fraîche, mozzarella, poulet fumé, cheddar, champignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="piza norvegienne.png" alt="Pizza Norvégienne" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Norvégienne</h3>
+              <p>Crème fraîche, mozzarella, saumon fumé</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza milano.jpg" alt="Pizza Milano" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Milano</h3>
+              <p>Crème fraîche, mozzarella, lardons, œuf, pommes de terre</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza-chèvre-miel.jpg" alt="Pizza Chèvre Miel" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Chèvre Miel</h3>
+              <p>Crème fraîche, mozzarella, fromage de chèvre, miel, olives</p>
+              <div class="menu-item-price">7.50 € (Sénior) / 12 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza country.jpg" alt="Pizza Country" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Country</h3>
+              <p>Crème fraîche, mozza, viande hachée, cheddar, pommes de terre, oignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza raclette.jpg" alt="Pizza Raclette" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Raclette</h3>
+              <p>Crème fraîche, mozzarella, jambon, pommes de terre, raclette, oignons</p>
+              <div class="menu-item-price">8.00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+          </div>
+          
+          <div class="menu-item">
+            <img src="pizza fermiière.jpeg" alt="Pizza Fermière" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Pizza Fermière</h3>
+              <p>Crème fraîche, mozzarella, poulet fumé, pommes de terre</p>
+              <div class="menu-item-price">7.50 € (Sénior) / 12 € (Méga)</div>
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <img src="pizza-3-jambons.jpg" alt="Pizza 3 Jambons" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza 3 Jambons</h3>
+                <p>Tomate, mozzarella, jambons, olives, merguez, viande hachée</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza burger.jpg" alt="Pizza Burger" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Burger</h3>
+                <p>Tomate, mozzarella, viande hachée, cheddar, sauce burger</p>
+                <div class="menu-item-price">8,00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza vege.jpg" alt="Pizza VG" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Végétarienne</h3>
+                <p>Tomate, mozzarella, légumes variés</p>
+                <div class="menu-item-price">8,00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza spe.jpeg" alt="Pizza Spéciale" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Spéciale</h3>
+                <p>Sauce barbecue, mozzarella, merguez, poulet tikka, viande hachée</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza-tartiflette.jpg" alt="Pizza Tartiflette" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Tartiflette</h3>
+                <p>Crème fraîche, mozzarella, lardons, reblochon, pommes de terre</p>
+                <div class="menu-item-price">8,00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza samourai.jpg" alt="Pizza Samourai" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Samourai</h3>
+                <p>Sauce samourai, mozzarella, poulet tikka, cheddar, oignons</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza boursin.jpg" alt="Pizza Boursin" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Boursin</h3>
+                <p>Crème fraîche, mozzarella, viande hachée, oignons, boursin, pommes de terre</p>
+                <div class="menu-item-price">8,00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza tacos.jpg" alt="Pizza Tacos" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Tacos</h3>
+                <p>Crème fraîche, mozzarella, poulet tikka, viande hachée, frites</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza-reblochon.jpg" alt="Pizza Reblochon" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Reblochon</h3>
+                <p>Crème fraîche, mozzarella, pommes de terre, jambon, reblochon</p>
+                <div class="menu-item-price">8,00 € (Sénior) / 12,50 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza marlysienne.jpeg" alt="Pizza Marlicienne" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Marly Sienne</h3>
+                <p>Crème fraîche, mozzarella, fromage de chèvre, lardons, tomates</p>
+                <div class="menu-item-price">7,50 € (Sénior) / 12,00 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza-spicy-hot.jpg" alt="Pizza Hot Spicy" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Hot Spicy</h3>
+                <p>Tomate, mozzarella, poulet tikka, poivrons, oignons, piment jalapeno</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza pimento.jpeg" alt="Pizza Pimento" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Pimento</h3>
+                <p>Sauce tomate, chili thai, mozzarella, merguez, piments, viande hachée, poivrons</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+            <img src="pizza chicago.jpg" alt="Pizza Chicago" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Chicago</h3>
+                <p>Crème fraîche, mozzarella, viande hachée, cheddar, œuf, jambon</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+        <div class="menu-item">
+          <img src="pizza pecheur.jpg" alt="Pizza Chicago" width="280" height="200">
+          <div class="menu-item-info">
+              <h3>Pizza Pêcheur</h3>
+              <p>Sauce Tomate, fromage, thon, oeuf, œuf, olives</p>
+              <div class="menu-item-price">8,00 € (Sénior) / 12,50 € (Méga)</div>
+          </div>
+      </div>
+
+        <div class="menu-item">
+            <img src="pizza cannibal.avif" alt="Pizza Cannibale" width="280" height="200">
+            <div class="menu-item-info">
+                <h3>Pizza Cannibale</h3>
+                <p>Tomate, mozzarella, poulet fumé, merguez, viande hachée</p>
+                <div class="menu-item-price">9,90 € (Sénior) / 13,90 € (Méga)</div>
+            </div>
+        </div>
+        
+          
+          <div class="menu-item">
+            <img src="cheeese.jpg" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Cheese Burger</h3>
+              <p>1 steaks, 1 fromages, salade, sauce burger</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">5.90 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="double steak.jpg" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Double Cheese Burger</h3>
+              <p>2 steaks, 2 fromages, salade, sauce burger</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">7.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="3 steak.webp" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Triple boeuf Burger</h3>
+              <p>3 steaks, 2 fromages, salade, sauce burger</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="patate burger.png" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Empire Cheese Burger</h3>
+              <p>1 steaks, galette de pomme de terre, fromages, salade, sauce burger</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">7.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="chicken potatos burger.png" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Empire Filet Burger</h3>
+              <p>Tenders, galette de pomme de terre, fromages, salade, sauce burger</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="Crispy-Fish-Burgers-FT-RECIPE0423-50a8e69285554174a44c6709f9fac010.jpg" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>CS Fish Burger</h3>
+              <p>Filet de poisson, formage, sauce mayonaise</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">7.20 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="chiken beef burger.webp" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Chiken Beef Burger</h3>
+              <p>2 Tenders, 1 steak, fromages, salade, sauce burger</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.90 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="poulet marine burger.jpeg" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>CS filler Burger</h3>
+              <p>Filet de poulet mariné, salade, formage, sauce mayonaise</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.90 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="crispy chiken burger$.jpg" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Empire filler Burger</h3>
+              <p>Tenders, salade, formage, sauce mayonaise</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="poulet tikka bburgert.avif" alt="Classic Burger" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Tikka Filet Burger</h3>
+              <p>Pain brioché, poulet pané, salade, tomate, sauce maison</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.90 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="wrap poulet.webp" alt="Chicken Wrap" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Wrap Poulet</h3>
+              <p>Tortilla, 4 tenders, salade, fromage, mayonaise</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.90 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="poulet tikka.jpg" alt="Chicken Wrap" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Wrap Tikka</h3>
+              <p>Tortilla, poulet tandoori, salade, fromage, mayonaise</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">9.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="wrap CS.jpg" alt="Chicken Wrap" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Wrap CS</h3>
+              <p>Tortilla, blanc de poulet mariné, salade, fromage, mayonaise</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">9.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="steak tenders wrap.jpeg" alt="Chicken Wrap" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Wrap Mixte</h3>
+              <p>Tortilla, 2 steaks, 2 tenders, salade, fromage, sauce biggy</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.90 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="steak_wrap.webp" alt="Chicken Wrap" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Wrap Beef</h3>
+              <p>Tortilla, 4 steaks, salade, fromage, sauce biggy</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="wrap radical.jpg" alt="Chicken Wrap" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Wrap Radical</h3>
+              <p>Tortilla, 2 steaks, 1 cordon bleu, salade, fromage, sauce biggy</p>
+              <p>Menus servis avec frites et canette 33cl</p>
+              <div class="menu-item-price">8.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini nutella.jpg" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini Nutella</h3>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini 3 fromage.jpg" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini 3 FROMAGES</h3>
+              <p>Mozzarella, crème fraîche, gorgonzola, fromage rapé</p>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini poulet.avif" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini FERMIER</h3>
+              <p>Mozzarella, poulet fûmé, crème fraîche</p>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini saumon.webp" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini PACIFICO</h3>
+              <p>Mozzarella, saumon, crème fraîche</p>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini chèvre miel.png" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini CHÉVRE</h3>
+              <p>Mozzarella, chèvre, crème fraîche</p>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini thon .jpg" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini MILANO</h3>
+              <p>Mozzarella, sauce tomate, thon</p>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini jambon.jpg" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini VÉNÉZIA</h3>
+              <p>Mozzarella, sauce tomate, jambon</p>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="panini viande haché.jpeg" alt="Panini Italien" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Panini KING</h3>
+              <p>Mozzarella, sauce tomate, viande haché</p>
+              <div class="menu-item-price">4.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="menu-enfant.jpg" alt="Menu Enfant" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Menu Enfant</h3>
+              <p> 3 Tenders ou 4 Nuggets ou 8 poppin popper ou chiken burger + frites + capri-sun</p>
+              <div class="menu-item-price">6.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="boissons-bouteilles-1-5L.jpg" alt="Soda" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Soda</h3>
+              <div class="menu-item-price">1.20 €</div>
+              <p>Coca-Cola, Fanta, Sprite (33cl)</p>
+              <div class="menu-item-price">1.00 €</div>
+              <p>EAU (50cl)</p>
+              <div class="menu-item-price">2.70 €</div>
+              <p>Coca-Cola, Fanta, Sprite (1l5)</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="tarte daim.jpg" alt="Tiramisu" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Tarte au daim</h3>
+              <p>La fameuse tarte au daim qui régale petit et grands !</p>
+              <div class="menu-item-price">2.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="tiramisu-speculoos-1200.jpg" alt="Tiramisu" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Tiramisu</h3>
+              <p>Biscuits, mascarpone, café, cacao</p>
+              <div class="menu-item-price">2.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="salade-italienne.jpg" alt="Salade César" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Salade Fraîche</h3>
+              <p>Salade, tomates cerises, feta, concombre olives, tenders, sauce salade</p>
+              <div class="menu-item-price">5.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="salade tenders.webp" alt="Salade César" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Salade Poulet</h3>
+              <p>Salade, tomates cerises, feta, concombre, olives, tenders, sauce salade, Maïs</p>
+              <div class="menu-item-price">6.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="salade-de-poulet-tikka_11093.jpg" alt="Salade César" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Salade Tikka</h3>
+              <p>Salade, tomates cerises, feta, concombre, olives, chiken tikka, sauce salade, Maïs</p>
+              <div class="menu-item-price">7.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="jalapenos.jpeg" alt="Nachos Tex Mex" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Jalapenos</h3>
+              <p>6 pièces</p>
+              <div class="menu-item-price">7.00 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="onion rings.jpg" alt="Onion Rings" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Onion Rings</h3>
+              <p>10 pièces</p>
+              <div class="menu-item-price">5.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="bouchee camembert.jpg" alt="Nachos Tex Mex" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Bouchée Camembert</h3>
+              <p>8 pièces</p>
+              <div class="menu-item-price">5.50 €</div>
+            </div>
+          </div>
+          <div class="menu-item">
+            <img src="mozzastick.webp" alt="Quesadillas Poulet" width="280" height="200">
+            <div class="menu-item-info">
+              <h3>Mozzastick</h3>
+              <p>8 pièces</p>
+              <div class="menu-item-price">5.50 €</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="marketplaces" class="marketplaces-section">
+        <h3>Commandez en ligne</h3>
+        <div class="marketplace-links">
+          <a href="https://www.ubereats.com/fr/store/asnieres-pizza-and-chicken/OF1vrcK5SmynoLh6nXjuSA" target="_blank" class="marketplace-link">
+            <img src="uber.png" alt="UberEats" class="marketplace-logo animated-logo">
+          </a>
+          <a href="https://deliveroo.fr/fr/menu/paris/asnieres-sur-seine-coubertin/asnieres-pizza" target="_blank" class="marketplace-link">
+            <img src="deliverooo.png" alt="Deliveroo" class="marketplace-logo animated-logo">
+          </a>
+        </div>
+      </section>
+      <section id="contact" class="contact-section">  
+        <h3>Contactez-nous</h3>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> <strong>Email :</strong> mbennaji@gmail.com</p>
+            <p><i class="fas fa-phone"></i> <strong>Téléphone :</strong> +33 01 47 93 03 66</p>
+            <p><i class="fas fa-map-marker-alt"></i> <strong><a href="https://www.google.fr/maps/place/88+Rue+du+M%C3%A9nil,+92600+Asni%C3%A8res-sur-Seine/@48.9208613,2.2734754,15z/data=!3m1!4b1!4m6!3m5!1s0x47e66f5f0ce53e3b:0x891755df512dc1d4!8m2!3d48.9208618!4d2.2837751!16s%2Fg%2F11c4cr4vn3?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">88 Rue du Ménil, 92600 Asnières-sur-Seine, France</a></p>
+        </div>
+    </section>
+
+
+    </main>
+
+
+    
+    <footer class="footer">
+      <p>&copy; 2023 Chicken Pizza. Tous droits réservés.</p>
+      <div class="social-icons">
+          <a href="https://www.facebook.com/chickenpizza" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.instagram.com/chickenpizza" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/chickenpizza" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+  </footer>
+
+      <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    const categoryButtons = document.querySelectorAll('.category-button');
+    const menuItems = document.querySelectorAll('.menu-item');
+
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const category = this.textContent.toLowerCase();
+
+            menuItems.forEach(item => {
+                const itemName = item.querySelector('h3').textContent.toLowerCase();
+                if (category === 'tous' || 
+                    (category === 'fried chicken' && itemName.includes('chicken')) ||
+                    (category === 'pizzas' && itemName.includes('pizza')) ||
+                    (category === 'burgers' && itemName.includes('burger')) ||
+                    (category === 'wraps' && itemName.includes('wrap')) ||
+                    (category === 'paninis' && itemName.includes('panini')) ||
+                    (category === 'menu enfant' && itemName.includes('menu enfant')) ||
+                    (category === 'boissons' && (itemName.includes('soda') || itemName.includes('boisson'))) ||
+                    (category === 'desserts' && (itemName.includes('tiramisu') || itemName.includes('dessert'))) ||
+                    (category === 'salades' && itemName.includes('salade')) ||
+                    (category === 'tex mex' && (
+                        itemName.includes('bouchée camembert') || 
+                        itemName.includes('jalapenos') ||
+                        itemName.includes('onion rings') ||  // Inclus ici
+                        itemName.includes('mozzastick')    // Inclus ici
+                    ))) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+// Récupérer le bouton
+let scrollTopBtn = document.getElementById("scrollTopBtn");
+
+// Montrer le bouton lorsque l'utilisateur scroll vers le bas de 20px
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+    } else {
+        scrollTopBtn.style.display = "none";
+    }
+};
+
+// Quand l'utilisateur clique sur le bouton, remonter en haut de la page
+scrollTopBtn.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+
+
+      </script>
+    </body>
+    </html>
